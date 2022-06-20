@@ -17,13 +17,13 @@ export default function Login(props){
 
           <div style={{marginTop:marginTop,marginLeft:marginLeft,marginRight:marginRight,opacity:opacity,width:'40%'}} >
     
-            <TextInput placeholder='first name' style={{padding:15,marginLeft:'100px',borderWidth:2,color:'white',backgroundColor:'white'}} onChangeText={(e)=>{setFname(e)}}/> 
+            <TextInput placeholder='first name' style={{padding:15,marginLeft:'100px',borderWidth:2,backgroundColor:'white'}} onChangeText={(e)=>{setFname(e)}}/> 
          
             <br></br>        <br></br>
             <br></br>
     
             <br></br>
-            <input placeholder='password' type={'password'} style={{padding:15,marginLeft:100,borderWidth:2,color:'white'}} onChange={(e)=>(setPassword(e.target.value))}/><br></br>
+            <input placeholder='password' type={'password'} style={{padding:15,marginLeft:100,borderWidth:2}} onChange={(e)=>(setPassword(e.target.value))}/><br></br>
             <button style={{backgroundColor:"#3275A6",marginLeft:155,height:50,width:100,border:'none',borderRadius:10}} onClick={async()=>{
                 let api = await fetch(`https://e-spark.herokuapp.com/login/${fname}`)
                 api = await api.json()
