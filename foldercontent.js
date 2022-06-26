@@ -118,7 +118,7 @@ console.log(retrievegoogledata1,retrievegoogledata2)
 
 
 
-                <div style={{padding:'10px'}}><TextInput type='text' placeholder='Youtube search' style={{padding:15,marginLeft:100,borderWidth:2}} onChangeText={(e)=>(setYoutubeSearch(e))}/>
+                <div style={{padding:'10px'}}><TextInput type='text' placeholder='Youtube search' style={{padding:15,marginLeft:100,borderWidth:2,color:'white'}} onChangeText={(e)=>(setYoutubeSearch(e))}/>
                 <button style={{backgroundColor:'#3275a6'}} onClick={async()=>{
                 setUpdated(updated+1)
                 let api = await fetch(`https://e-spark.herokuapp.com/get_youtube_data/${youtubesearch}`)
