@@ -29,13 +29,14 @@ export default function Login(props){
                 api = await api.json()
                 if(api['data'] == "username not found"){
                   console.log('username not found')
+                    alert("username not found")
                 }
                 if(password == api["data"]){
                   setAccess("Granted")
                   props.navigation.navigate('HomePage',{name:fname})
                 }
                 else{
-                  Alert.alert('Incorrect Password')
+                  alert('Incorrect Password')
                 }
                 console.log(access)
         }}><Text>Log in (Triple click)</Text></button><br></br><br></br>
